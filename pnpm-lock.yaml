@@ -36,6 +36,9 @@ importers:
       '@catppuccin/tailwindcss':
         specifier: ^1.0.0
         version: 1.0.0
+      '@deemlol/next-icons':
+        specifier: ^0.1.9
+        version: 0.1.9(react@19.1.0)
       '@eslint/eslintrc':
         specifier: ^3
         version: 3.3.1
@@ -98,6 +101,11 @@ packages:
   '@cesium/widgets@13.0.0':
     resolution: {integrity: sha512-Gc/ffnu4anzn6wDjLviYYOydb0OrGWY6ie5pKV+cNWbL48tfLRUZL6D3MJVS+qhSB3NhyA050v82NvPzYbqnuQ==}
     engines: {node: '>=20.19.0'}
+
+  '@deemlol/next-icons@0.1.9':
+    resolution: {integrity: sha512-TgKjPAyNTmmpmYSvRX6T0ZkqdV96vo7iEkiCEhQ8ZpBXrKvBokRn3wmuoFv44st6hI0vw2SVsF3TXrKe+s3MUQ==}
+    peerDependencies:
+      react: ^19.0.0
 
   '@emnapi/core@1.4.5':
     resolution: {integrity: sha512-XsLw1dEOpkSX/WucdqUhPWP7hDxSvZiY+fsUC14h+FtQ2Ifni4znbBt8punRX+Uj2JG/uDb8nEHVKvrVlvdZ5Q==}
@@ -2285,6 +2293,10 @@ snapshots:
     dependencies:
       '@cesium/engine': 19.0.0
       nosleep.js: 0.12.0
+
+  '@deemlol/next-icons@0.1.9(react@19.1.0)':
+    dependencies:
+      react: 19.1.0
 
   '@emnapi/core@1.4.5':
     dependencies:

@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import React from 'react';
 import type { CesiumType, Position } from '@/app/lib/types';
 
-const CesiumDynamicComponent = dynamic(() => import('@/app/ui/cesium/cesium-component'), {
+const CesiumDynamicComponent = dynamic(() => import('@/components/cesium/cesium-component'), {
   ssr: false
 });
 

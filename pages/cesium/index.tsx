@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import CesiumWrapper from '@/app/ui/cesium/cesium-wrapper';
+import CesiumWrapper from '@/components/cesium/cesium-wrapper';
 
 async function getPosition() {
   return {
@@ -11,7 +11,7 @@ async function getPosition() {
   };
 }
 
-export default async function Home() {
+export default async function Page() {
   const fetchedPosition = await getPosition();
   return (
     <main>
