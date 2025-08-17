@@ -29,7 +29,7 @@ export default function Home() {
             github: '#',
           }}
         />
-        <div className='divider divider-horizontal' />
+        {/* <div className='divider divider-horizontal' />
         <NavCard
           img="/daisy-lemon.webp"
           text={{
@@ -37,11 +37,11 @@ export default function Home() {
             body: "CesiumJS tutorial that builds a Cesium app to visualize a new proposed building."
           }}
           links={{
-            page: '/tutorials/new-building',
+            page: '#',
             second: 'https://cesium.com/learn/cesiumjs-learn/cesiumjs-interactive-building/',
             github: '#',
           }}
-        />
+        /> */}
       </div>
     </main>
   )
