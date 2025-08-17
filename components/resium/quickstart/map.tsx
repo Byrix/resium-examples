@@ -1,6 +1,5 @@
-import { CameraFlyTo, Viewer } from 'resium';
-import { Cartesian3, Math as CMath, createWorldTerrainAsync, createOsmBuildingsAsync } from 'cesium';
-import { Cesium3DTileset } from '@/components/resiumOverwrites';
+import { CameraFlyTo, Viewer, Cesium3DTileset } from 'resium';
+import { Cartesian3, Math as CMath, createWorldTerrainAsync, IonResource } from 'cesium';
 
 export default function ResiumMap() {
   return (
@@ -13,7 +12,7 @@ export default function ResiumMap() {
         }}
       />
 
-      <Cesium3DTileset src={createOsmBuildingsAsync()} />
+      <Cesium3DTileset url={IonResource.fromAssetId(96188)} />
     </Viewer>
   );
 }

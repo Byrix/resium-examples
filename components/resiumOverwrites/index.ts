@@ -1,1 +1,0 @@
-export { default as Cesium3DTileset, type Cesium3DTilesetProps } from "./Cesium3DTileset";
