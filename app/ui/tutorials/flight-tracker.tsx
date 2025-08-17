@@ -1,5 +1,7 @@
+'use client';
+
 import { CameraFlyTo, Viewer, Entity, PointGraphics, Cesium3DTileset, Clock, PathGraphics, ModelGraphics } from 'resium';
-import { Cartesian3, Math as CMath, createWorldTerrainAsync, JulianDate, Color, IonResource, SampledPositionProperty, TimeIntervalCollection, TimeInterval } from 'cesium';
+import { Cartesian3, Math as CMath, createWorldTerrainAsync, JulianDate, Color, IonResource, SampledPositionProperty, TimeIntervalCollection, TimeInterval, VelocityOrientationProperty } from 'cesium';
 
 interface Position3D {
   longitude: number,
@@ -30,7 +32,7 @@ export default function ResiumMap() {
         positionProperty.addSample(time, geoPoint);
 
         return (
-          <Entity position={geoPoint}>
+          <Entity position={geoPoint} key={i}>
             <PointGraphics pixelSize={10} color={Color.RED} />
           </Entity>
         );
@@ -47,6 +49,7 @@ export default function ResiumMap() {
       <Entity 
         availability={positionAvailability}
         position={positionProperty}
+        orientation={new VelocityOrientationProperty(positionProperty)}
         tracked={true}
       >
         <ModelGraphics uri="/Cesium_Plane.glb" minimumPixelSize={128} maximumScale={20000} />
@@ -58,11 +61,10 @@ export default function ResiumMap() {
         destination={initPoint} 
         orientation={{
           heading: CMath.toRadians(0.0),
-          pitch: CMath.toRadians(-15.0),
+          pitch: CMath.toRadians(-65.0),
         }}
       />
 
-      {/* <Cesium3DTileset src={createOsmBuildingsAsync()} /> */}
       <Cesium3DTileset url={IonResource.fromAssetId(96188)} />
     </Viewer>
   );

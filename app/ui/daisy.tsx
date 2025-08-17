@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function DividerHorizontal({ leftHref, leftLabel, rightLabel, rightHref, sepText="OR", className='' }: { 
+export function DividerHorizontal({ leftHref, leftLabel, rightLabel, rightHref, sepText="OR", className='' }: { 
   leftHref?: string,
   leftLabel: string,
   rightHref?: string,

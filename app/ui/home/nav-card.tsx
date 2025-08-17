@@ -16,7 +16,7 @@ export default function NavCard({ img, text, links }: {
   }
 }) {
   return (
-    <div className='card bg-base-300 rounded-box grid grow place-items-center w-8/16 max-w-8/16 h-full'>
+    <div className='card bg-base-200 w-96 shadow-sm'>
       <figure className='px-5 pt-5'>
         <Image
           src={img}

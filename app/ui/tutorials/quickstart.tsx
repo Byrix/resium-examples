@@ -1,3 +1,5 @@
+'use client';
+
 import { CameraFlyTo, Viewer, Cesium3DTileset } from 'resium';
 import { Cartesian3, Math as CMath, createWorldTerrainAsync, IonResource } from 'cesium';
 
