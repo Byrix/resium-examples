@@ -9,3 +9,9 @@ export type RedirectEntry = {
   destination: string,
   perm: boolean
 };
+
+export type DropdownItem = {
+  label: string,
+  href?: string,
+  className?: string
+}
