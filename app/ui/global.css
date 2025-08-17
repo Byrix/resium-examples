@@ -2,10 +2,6 @@
 @import "@catppuccin/tailwindcss/mocha.css";
 @import "cesium/Build/Cesium/Widgets/widgets.css";
 
-@plugin 'daisyui' {
-  themes: false;
-}
-
-
-@plugin "./themes/catppuccinTheme.mocha.ts";
-@plugin "./themes/catppuccinTheme.latte.ts";
+@plugin 'daisyui' { themes: false; }
+@plugin "./themes/catppuccinTheme.mocha.ts";  /* prefers-dark-mode */
+@plugin "./themes/catppuccinTheme.latte.ts";  /* default */
