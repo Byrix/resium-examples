@@ -52,7 +52,7 @@ export default function ResiumMap({ className }: { className?: string }) {
         orientation={new VelocityOrientationProperty(positionProperty)}
         tracked={true}
       >
-        <ModelGraphics uri="/Cesium_Plane.glb" minimumPixelSize={128} maximumScale={20000} />
+        <ModelGraphics uri="/tutorials/flight-tracker/Cesium_Plane.glb" minimumPixelSize={128} maximumScale={20000} />
         {/* <PointGraphics pixelSize={30} color={Color.GREEN} /> */}
         <PathGraphics width={3} />
       </Entity>
