@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "@catppuccin/tailwindcss/mocha.css";
+@import "cesium/Build/Cesium/Widgets/widgets.css";
+
+@plugin 'daisyui' {
+  themes: false;
+}
+
+
+@plugin "./themes/catppuccinTheme.mocha.ts";
+@plugin "./themes/catppuccinTheme.latte.ts";
