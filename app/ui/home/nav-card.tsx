@@ -16,17 +16,17 @@ export default function NavCard({ img, text, links }: {
   }
 }) {
   return (
-    <div className='card bg-base-200 w-96 shadow-sm'>
-      <figure className='px-5 pt-5'>
+    <div className='card bg-base-200 aspect-3/4 w-auto min-w-96 shadow-sm h-full border-base-200 border-12 rounded-box'>
+      <figure className='shrink-1 min-h-0 overflow-clip rounded-box'>
         <Image
           src={img}
-          className='rounded-box'
           width={300}
           height={400}
+          className='aspect-3/4 w-full h-auto'
           alt="Grape"
         />
       </figure>
-      <div className='card-body items-center text-center'>
+      <div className='card-body items-center text-center min-h-auto grow-1'>
         <h2 className='card-title text-2xl'>{text.title}</h2>
         <p className='px-2 pb-2'>{text.body}</p>
         <div className='card-actions w-full'>

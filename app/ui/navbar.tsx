@@ -11,12 +11,13 @@ export default function NavBar() {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
           </div>
           <ul tabIndex={0} className='menu menu-sm dropdown-content bg-base-200 rounded-box z- mt-3 w-52 p-2'>
+            <li><Link href='/sandbox'>Sandbox</Link></li>
             <li>
               <a>Tutorials</a>
               <ul className='p-2'>
                 <li><Link href='/tutorials/quick-start'>Quickstart</Link></li>
                 <li><Link href='/tutorials/flight-tracker'>Flight Tracker</Link></li>
-                <li><Link href='#'>Building Visualiser</Link></li>
+                <li><Link href='/tutorials/new-building'>Building Visualiser</Link></li>
               </ul>
             </li>
           </ul>
@@ -26,12 +27,13 @@ export default function NavBar() {
 
       <div className='navbar-end hidden lg:flex'>
         <div className='flex items-stretch'>
+          <Link className='btn btn-ghost rounded-field' href='/sandbox'>Sandbox</Link>
           <DropdownHover 
             name='Tutorials'
             items={[
               {label: 'Quickstart', href: '/tutorials/quick-start'},
               {label: 'Flight Tracker', href: '/tutorials/flight-tracker'},
-              {label: 'Building Visualiser', className: 'btn-disabled'},
+              {label: 'Building Visualiser', href: '/tutorials/new-building'},
             ]}
           />
         </div>
@@ -53,11 +55,11 @@ function DropdownHover({ name, items }: {
       </div>
       <ul tabIndex={0} className='dropdown-content menu bg-base-300 rounded-box z-1 w-64 p-2'>
         {items.map((item, i) => {
-          const badge = item.className?.includes('btn-disabled') ? <div className='badge badge-outline badge-info '>WIP</div> : null;
+          const badge = item.className?.includes('-disabled') ? <div className='badge badge-outline badge-info '>WIP</div> : null;
 
           return (
-            <li key={i}>
-              <Link className={`btn btn-ghost ${item.className || ''}`} href={item.href || ''}>{item.label}{badge}</Link>
+            <li key={i} className={item.className || ''}>
+              <Link href={item.href || ''}>{item.label}{badge}</Link>
             </li>
           )
         })}
