@@ -26,8 +26,8 @@ export default function ResiumMap({ className }: { className?: string }) {
   return (
     <Viewer terrainProvider={createWorldTerrainAsync()} className={className}>
       {flightData.map((dataPoint: Position3D, i: number) => {
-        let geoPoint = Cartesian3.fromDegrees(dataPoint.longitude, dataPoint.latitude, dataPoint.height);
-        let time = JulianDate.addSeconds(timeStart, i*timeStep, new JulianDate());
+        const geoPoint = Cartesian3.fromDegrees(dataPoint.longitude, dataPoint.latitude, dataPoint.height);
+        const time = JulianDate.addSeconds(timeStart, i*timeStep, new JulianDate());
 
         positionProperty.addSample(time, geoPoint);
 

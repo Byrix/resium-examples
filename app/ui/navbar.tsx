@@ -22,7 +22,7 @@ export default function NavBar() {
             </li>
           </ul>
         </div>
-        <a className='btn btn-ghost text-4xl'>cycl<span className='text-ctp-blue-950 -ml-1'>3d</span></a>
+        <a className='btn btn-ghost text-4xl'>Resium Examples</a>
       </div>
 
       <div className='navbar-end hidden lg:flex'>

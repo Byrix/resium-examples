@@ -1,7 +1,7 @@
 'use client';
 
 import { Cesium3DTileset, Viewer, Camera, GeoJsonDataSource } from "resium";
-import { createWorldTerrainAsync, Cartesian3, Math as CesiumMath, IonResource, ClassificationType, Cesium3DTileStyle } from "cesium";
+import { createWorldTerrainAsync, Cartesian3, IonResource, Cesium3DTileStyle } from "cesium";
 import { drapePolygonTerrain } from '@/app/lib/cesium';
 import { useState } from 'react';
 
