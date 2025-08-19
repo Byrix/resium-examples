@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import { Github as GithubIcon } from '@deemlol/next-icons';
 
@@ -18,7 +17,7 @@ export default function NavCard({ img, text, links }: {
   return (
     <div className='card bg-base-200 aspect-3/4 w-auto min-w-96 shadow-sm h-full border-base-200 border-12 rounded-box'>
       <figure className='shrink-1 min-h-0 overflow-clip rounded-box'>
-        <Image
+        <img
           src={img}
           width={300}
           height={400}
