@@ -55,7 +55,7 @@ export default function BuildingVisualiser({ className = '' }: { className?: str
           onLoad={drapePolygonTerrain}
         />
         <Cesium3DTileset
-          url={IonResource.fromAssetId(3641478, { accessToken: process.env.NEXT_PUBLIC_CESIUM_TOKEN })}
+          url={IonResource.fromAssetId(3641478, { accessToken: process.env.CESIUM_TOKEN })}
           show={showNewBuilding}
         />
       </Viewer>
